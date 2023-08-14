@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service in India | MyFoodZone.com</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="{% static 'css/phone.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        form{
+            padding:30px;
+            border:5px solid rgb(4, 171, 254);
+            width:400px;
+            height:400px;
+            background-color:rgba(255, 0,0, 0.4);
+            margin-top: 300px;
+            margin: auto;
+            
+             
+        }
+        select{
+            width:298px;
+            height:40px;
+            border-radius: 10px;
+            font-size: 25px;
+            margin-left: 50px;
+            margin-top: 20px;
+            border: 2px solid rebeccapurple;
+            text-align: center;
+        }
+        select:hover{
+            background-color: rgb(124, 182, 236);
+            color: white;
+        }
+        button{
+            margin-top: 30px;
+            height:50px;
+            width:200px;
+            padding: 5px;
+            background-color: rgb(228, 8, 56);
+            border: 2px solid rebeccapurple;
+            color: white;
+            border-radius: 25px;
+            margin-left: 100px;
+            font-size: 22px;
+            font-weight: 800;
+            
+        }
+        button:hover{
+            background-color: rgb(8, 56, 212);
+        }
+        body{
+            background: url("https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=996&t=st=1691831554~exp=1691832154~hmac=3409cc004061445d9adc6437cbcc289cf61bcb55c4c2559621c7cfc0b4be9cb1");
+            height:100vh;
+            width:100%;
+            background-size: 100% 100%;
+            align-items: center;
+        }
+        input{
+            border: 2px solid rebeccapurple;
+            width: 298px;
+            margin-left: 50px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        textarea{
+            border: 2px solid rebeccapurple;
+            margin-top: 18px;
+            border-radius: 10px;
+            margin-left: 50px;
+        }
+        ::placeholder{
+            color: black;
+            text-align: center;
+            font-size: larger;
+        }
+
+        textarea::placeholder{
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'img/logo.JPG' %}" alt="MyFoodZone.com">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    
+    <!-- #########################################3 -->
+    <form method="post" action="orderNow">{% csrf_token %}
+        <input type="text" placeholder="Enter Your Name" name="name"><br>
+        <textarea name="address" placeholder="Enter Your Address" cols="38" rows="10" name="add"></textarea>
+        <select name="item">
+            <option>Select Item</option>
+            <option value="Healthy Breakfast">Healthy Breakfast</option>
+            <option value="Cold Ice-Cream">Cold Ice-Cream</option>
+            <option value="Spicy Noodles">Spicy Noodles</option>
+            <option value="Hot Pizza">Hot Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Cold Drinks">Cold Drinks</option>
+            </select><br>
+            
+            <select name="qty">
+            <option>Select Qty.</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            </select><br>
+            <button type="submit">ORDER</button>
+    </form>
+
+    
+</body>
+</html>

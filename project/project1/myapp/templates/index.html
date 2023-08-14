@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Service in India | MyFoodZone.com</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="{% static 'css/phone.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="backgroundcolor">black</div>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'img/logo.JPG' %}" alt="MyFoodZone.com">
+</div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">For the love of delicious food</h1>
+        <p>Come with family & feel the joy of mouthwatering food</p>
+        <a href="order"><button class="btn">Order Now</button></a>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">We Offer Top Notch</h1>
+        <div id="services">
+            <div class="box">
+                <img src="{% static 'img/11.jpg' %}" alt="">
+                <h2 class="h-secondary center">Spicy Noodles</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam amet enim quis?
+                     Excepturi, saepe unde incidunt</p>
+            </div>
+            <div class="box">
+            <img src="{% static 'img/22.jpg' %}" alt="">
+            <h2 class="h-secondary center">Hot Pizza</h2>
+            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam amet enim quis?
+                 Excepturi, saepe unde incidunt</p>
+        </div>
+        <div class="box">
+        <img src="{% static 'img/33.JPG' %}" alt="">
+        <h2 class="h-secondary center">Burger</h2>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam amet enim quis?
+             Excepturi, saepe unde incidunt</p>
+    </div>
+ 
+          
+        </div>
+
+    </section>
+    <section id="services-container">
+        <div id="services">
+            <div class="box">
+                <img src="{% static 'img/44.JPG' %}" alt="">
+                <h2 class="h-secondary center">Healthy Breakfast</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam amet enim quis?
+                     Excepturi, saepe unde incidunt</p>
+            </div>
+            <div class="box">
+            <img src="{% static 'img/55.jpg' %}" alt="">
+            <h2 class="h-secondary center">Cold Ice-Cream</h2>
+            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam amet enim quis?
+                 Excepturi, saepe unde incidunt</p>
+        </div>
+        <div class="box">
+        <img src="{% static 'img/66.jpg' %}" alt="">
+        <h2 class="h-secondary center">Cold Drinks</h2>
+        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam amet enim quis?
+             Excepturi, saepe unde incidunt</p>
+    </div>
+ 
+          
+        </div>
+
+    </section>
+
+
+  
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="{% static 'img/logo22.png' %}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{% static 'img/logo33.png' %}" alt="Our Client">
+            </div> 
+            <div class="client-item">
+                <img src="{% static 'img/logo66.png' %}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{% static 'img/logo44.png' %}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{% static 'img/logo55.png' %}" alt="Our Client">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="formContact" method="post"> {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type=" text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="mail" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="phn" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="submit"></label>
+                    <input type="submit" id="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.MyFoodZone.com. All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>

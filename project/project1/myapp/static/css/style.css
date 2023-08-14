@@ -1,0 +1,241 @@
+/* CSS Reset */
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+
+}
+
+/* Navigation Bar */
+#navbar{
+    display:flex;
+    align-items:center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content:"";
+    background-color:black;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin:10px 34px;
+}
+
+#logo img{
+    height:59px;
+    margin:3px 6px;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul{
+    display:flex;
+    color: white;
+    font-family: 'Bree Serif', serif;
+    
+}
+
+#navbar ul li{
+    list-style:none;
+    font-size:1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color:black;
+    background-color:white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height:600px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content:"";
+    position:absolute;
+    background:url("/static/img/bg2.jpg") no-repeat center center/cover;
+    height:640px;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    z-index:-1;
+    opacity: 0.89;
+
+}
+
+#home h1{
+    color:white;
+    text-align:right;
+    font-size: 4.5rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.9px;
+}
+
+#home p{
+    color:white;
+    text-align:center;
+    font-size:1.2rem;
+    font-family: 'Bree Serif', serif;
+    padding: 5.0px;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid rgb(234, 223, 223);
+    padding: 39px;
+    margin: 2px 55px;
+    border-radius: 20px;
+    background: white;
+    margin-bottom: 20px;
+}
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* Clients Section */
+
+#client-section{
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../css/bg4.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 20px;
+}
+#clients img{
+    height: 70px;
+}
+/* Contact Section */
+#contact{
+    position: relative;
+    margin-top: 30px;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../css/contact\ 2.jpg') no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 32px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    height:70%;
+    padding: 0.7rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+#contact-box form{
+    width: 28%;
+    height: 65%;
+}
+#contact-box label{
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    color:rgb(234, 223, 223);
+}
+
+footer{
+    background: white;
+    color: black;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Montserrat', sans-serif;
+    font-size:2.6rem;
+    padding:20px;
+    color: white;
+}
+
+.h-secondary{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    padding: 11px;
+    
+}
+.btn{
+    padding:07px 20px;
+    border:2px solid white;
+    background-color:rgb(142, 24, 24);
+    color:white;
+    margin:08px;
+    font-size:1.5rem;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+
+
+
